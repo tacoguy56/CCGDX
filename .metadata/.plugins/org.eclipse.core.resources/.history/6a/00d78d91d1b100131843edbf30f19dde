@@ -1,0 +1,12 @@
+package tacoguy56.ccgdx.cookies;
+
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+import tacoguy56.ccgdx.Game;
+import tacoguy56.ccgdx.util.FontHelper;
+public class CookieManager {
+	private boolean manuCookieBool = false;
+	public static void tick(SpriteBatch b){
+		FontHelper.printCookies(b);
+	}
+}

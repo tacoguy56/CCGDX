@@ -1,0 +1,17 @@
+package tacoguy56.ccgdx.button;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.badlogic.gdx.graphics.Texture;
+
+public class ButtonHandler {
+	public static List<Button> buttons = new ArrayList<Button>();
+
+	public static void addButton(int x, int y, int sizeX, int sizeY, Texture idle, Texture hover, Texture click, String ID){
+		Button b = new Button(sizeY, sizeX, idle, hover, click, ID);
+		b.setSize(x, y);
+		buttons.add(b);
+	}
+	
+}

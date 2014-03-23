@@ -1,0 +1,18 @@
+package tacoguy56.ccgdx.button;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+
+import tacoguy56.ccgdx.Size;
+import tacoguy56.ccgdx.Thing;
+
+public class Button extends Thing{
+	private Texture texture;
+	private Sprite sprite;
+	public Button(int x, int y) {
+		super(x, y);
+	}
+	public void tick(){
+		
+	}
+}

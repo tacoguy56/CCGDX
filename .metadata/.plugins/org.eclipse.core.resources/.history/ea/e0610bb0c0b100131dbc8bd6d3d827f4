@@ -1,0 +1,12 @@
+package tacoguy56.ccgdx.cookies;
+
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+import tacoguy56.ccgdx.Game;
+
+public class CookieManager {
+	public static void tick(SpriteBatch b){
+		printCookies(b);
+		Game.cookies++;
+	}
+}
