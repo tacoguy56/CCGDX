@@ -41,8 +41,6 @@ public class Game implements ApplicationListener {
 		batch = new SpriteBatch();
 		ButtonHandler.addButton(0, 0, 200, 200, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), "Cookie");
 		ButtonHandler.addButton(380, 220, 100, 100, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), "Cursor");
-		ButtonHandler.setEnabled("Cookie", true);
-		ButtonHandler.setEnabled("Cursor", false);
 		trueHeight = Gdx.graphics.getHeight();
 		trueWidth = Gdx.graphics.getWidth();
 	}
@@ -65,8 +63,8 @@ public class Game implements ApplicationListener {
 
 		List<Button> buttons = ButtonHandler.buttons;
 		for(int i = 0; i < buttons.size(); i++){
-			buttons.get(i).tick();
 			buttons.get(i).render(batch);
+			buttons.get(i).tick();
 		}
 		try {
 			CookieManager.tick(batch);

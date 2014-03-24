@@ -64,9 +64,6 @@ public class Button extends Thing{
 			}
 			currentMouseInteraction = 2;
 		}
-		if(!enabled){
-			this.setTexture(click);
-		}
 	}
 	
 }

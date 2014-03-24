@@ -17,7 +17,6 @@ public class Button extends Thing{
 	private Texture idle;
 	private Texture hover;
 	private Texture click;
-	public static boolean enabled;
 	private String ID;
 	public Button(int x, int y, Texture idle, Texture hover, Texture click, String ID) {
 		super(x, y);
@@ -63,9 +62,6 @@ public class Button extends Thing{
 				this.setTexture(click);
 			}
 			currentMouseInteraction = 2;
-		}
-		if(!enabled){
-			this.setTexture(click);
 		}
 	}
 	

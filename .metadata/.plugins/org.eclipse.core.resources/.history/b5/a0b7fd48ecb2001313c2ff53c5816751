@@ -15,24 +15,11 @@ public class ButtonHandler {
 		System.out.println("Added button " + ID);
 	}
 	public static Button getButtonByID(String ID) throws Exception{
-		return buttons.get(buttonByIDInt(ID));
-	}
-	private static int buttonByIDInt(String ID) throws Exception{
-		for(int i = 0; i < buttons.size(); i++){
+		for(int i = 0; i < 12; i++){
 			if(buttons.get(i).getID() == ID){
-				return i;
+				return buttons.get(i);
 			}
 		}
 		throw new Exception("Called for a button ID that does not exist!");
-	}
-	public static void setEnabled(String ID, boolean bool){
-		try {
-			Button temp = getButtonByID(ID);
-			temp.enabled = bool;
-			buttons.set(buttonByIDInt(ID), temp);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }

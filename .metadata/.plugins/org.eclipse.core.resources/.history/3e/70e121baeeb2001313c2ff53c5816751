@@ -18,7 +18,7 @@ public class ButtonHandler {
 		return buttons.get(buttonByIDInt(ID));
 	}
 	private static int buttonByIDInt(String ID) throws Exception{
-		for(int i = 0; i < buttons.size(); i++){
+		for(int i = 0; i < 12; i++){
 			if(buttons.get(i).getID() == ID){
 				return i;
 			}

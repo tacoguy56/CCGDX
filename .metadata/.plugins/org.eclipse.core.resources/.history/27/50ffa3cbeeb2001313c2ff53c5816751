@@ -42,7 +42,7 @@ public class Game implements ApplicationListener {
 		ButtonHandler.addButton(0, 0, 200, 200, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), "Cookie");
 		ButtonHandler.addButton(380, 220, 100, 100, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), "Cursor");
 		ButtonHandler.setEnabled("Cookie", true);
-		ButtonHandler.setEnabled("Cursor", false);
+		ButtonHandler.setEnabled("Cusor", false);
 		trueHeight = Gdx.graphics.getHeight();
 		trueWidth = Gdx.graphics.getWidth();
 	}
