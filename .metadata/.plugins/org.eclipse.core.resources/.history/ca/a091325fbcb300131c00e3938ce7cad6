@@ -1,0 +1,14 @@
+package tacoguy56.ccgdx.button;
+
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+public interface Clickable {
+	int currentMouseInteraction = 0;
+	boolean enabled = false;
+
+	public void clicked();
+
+	public void tick();
+
+	public void render(SpriteBatch batch);
+}

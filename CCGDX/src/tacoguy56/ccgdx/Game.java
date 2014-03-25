@@ -24,7 +24,6 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 public class Game implements ApplicationListener {
 	private OrthographicCamera camera;
 	public SpriteBatch batch;
-	private Texture texture;
 	private static int trueHeight;
 	private static int trueWidth;
 	public static int trueY;
@@ -40,7 +39,7 @@ public class Game implements ApplicationListener {
 		camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
 		ButtonHandler.addButton(0, 0, 200, 200, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), "Cookie");
-		ButtonHandler.addButton(380, 220, 100, 100, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), "Cursor");
+		ButtonHandler.addButtonCPS(380, 220, 100, 100, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), "Cursor", 15);
 		ButtonHandler.setEnabled("Cookie", true);
 		ButtonHandler.setEnabled("Cursor", false);
 		trueHeight = Gdx.graphics.getHeight();
@@ -50,7 +49,6 @@ public class Game implements ApplicationListener {
 	@Override
 	public void dispose() {
 		batch.dispose();
-		texture.dispose();
 	}
 	@Override
 	public void render() {
@@ -87,6 +85,12 @@ public class Game implements ApplicationListener {
 		if(Gdx.input.isKeyPressed(Keys.UP)){
 			t.setPosition(t.position.x, t.position.y + 2);
 		}*/
+		try {
+			System.out.println(ButtonHandler.getButtonByID("Cookie").enabled);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override

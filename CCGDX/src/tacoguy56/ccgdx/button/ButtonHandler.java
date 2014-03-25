@@ -14,6 +14,13 @@ public class ButtonHandler {
 		buttons.add(b);
 		System.out.println("Added button " + ID);
 	}
+	public static void addButtonCPS(int x, int y, int sizeX, int sizeY, Texture idle, Texture hover, Texture click, String ID, int startPrice){
+		ButtonCPS b = new ButtonCPS(sizeY, sizeX, idle, hover, click, ID, startPrice);
+		b.setPosition(x, y);
+		buttons.add(b);
+		System.out.println("Added button " + ID);
+	}
+
 	public static Button getButtonByID(String ID) throws Exception{
 		return buttons.get(buttonByIDInt(ID));
 	}

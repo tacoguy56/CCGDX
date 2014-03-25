@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class Thing {
+public class Thing{
 	protected Texture texture;
 	protected Sprite sprite;
 	protected Size size;

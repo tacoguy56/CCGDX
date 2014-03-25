@@ -17,8 +17,8 @@ public class Button extends Thing{
 	private Texture idle;
 	private Texture hover;
 	private Texture click;
-	public static boolean enabled;
-	private String ID;
+	public boolean enabled = true;
+	private final String ID;
 	public Button(int x, int y, Texture idle, Texture hover, Texture click, String ID) {
 		super(x, y);
 		this.idle = idle;
@@ -64,9 +64,12 @@ public class Button extends Thing{
 			}
 			currentMouseInteraction = 2;
 		}
-		if(!enabled){
+		if(!this.enabled){
 			this.setTexture(click);
 		}
+	}
+	public void clicked() {
+		Game.cookies++;
 	}
 	
 }
