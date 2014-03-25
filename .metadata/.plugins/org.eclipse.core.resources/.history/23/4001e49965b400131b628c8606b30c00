@@ -11,11 +11,6 @@ public class CookieManager {
 	private static boolean manuCookieBool = false;
 	public static void tick(SpriteBatch b) throws Exception{
 		FontHelper.printCookies(b);
-		for(int i = 0; i < ButtonHandler.buttons.size(); i++){
-			if(ButtonHandler.buttons.get(i) instanceof ButtonCPS){
-				ButtonCPS bcps = (ButtonCPS) ButtonHandler.buttons.get(i);
-				FontHelper.printString(Integer.toString(bcps.amount), b, Color.BLACK, bcps.position.x, bcps.position.y);
-			}
-		}
+		FontHelper.printString(Integer.toString(((ButtonCPS) ButtonHandler.getButtonByID("Cursor")).amount), b, Color.BLACK, 380, 220);
 	}
 }

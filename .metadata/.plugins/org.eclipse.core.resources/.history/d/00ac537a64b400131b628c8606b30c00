@@ -17,7 +17,6 @@ public class Button extends Thing{
 	private Texture idle;
 	private Texture hover;
 	private Texture click;
-	private boolean enabledLogic = false;
 	public boolean enabled = true;
 	private final String ID;
 	public Button(int x, int y, Texture idle, Texture hover, Texture click, String ID) {
@@ -67,14 +66,9 @@ public class Button extends Thing{
 		}
 		if(!this.enabled){
 			this.setTexture(click);
-			enabledLogic = true;
 		} else{
-			if(enabledLogic){
 			this.currentMouseInteraction = 3;
-			enabledLogic = false;
 			this.tick();
-			}
-			enabledLogic = false;
 		}
 	}
 	public void clicked() {

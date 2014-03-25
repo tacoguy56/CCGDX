@@ -19,7 +19,6 @@ public class ButtonCPS extends Button{
 		} else{
 			this.enabled = false;
 		}
-		super.tick();
 	}
 	@Override
 	public void clicked(){

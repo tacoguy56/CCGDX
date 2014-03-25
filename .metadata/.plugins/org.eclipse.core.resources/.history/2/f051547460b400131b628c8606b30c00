@@ -1,0 +1,26 @@
+package tacoguy56.ccgdx.util;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Buttons;
+
+import tacoguy56.ccgdx.Game;
+import tacoguy56.ccgdx.button.ButtonHandler;
+
+public class ClickHandler {
+	private static boolean clickBoolean;
+	public static void tick(){
+		boolean mouse = Gdx.input.isButtonPressed(Buttons.LEFT);
+		if(mouse){
+			if(!clickBoolean){
+				System.out.println("Cleeck!");
+				findClick();
+			}
+			clickBoolean = true;
+			} else{
+			clickBoolean = false;	
+		}
+	}
+	private static void findClick(){
+		ButtonHandler.clickButton(0);
+	}
+}

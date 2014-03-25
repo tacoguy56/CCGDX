@@ -13,15 +13,6 @@ public class ButtonCPS extends Button{
 		this.buttonPrice = startPrice;
 	}
 	@Override
-	public void tick(){
-		if(Game.cookies >= this.buttonPrice){
-			this.enabled = true;
-		} else{
-			this.enabled = false;
-		}
-		super.tick();
-	}
-	@Override
 	public void clicked(){
 		if(this.enabled){
 		amount++;

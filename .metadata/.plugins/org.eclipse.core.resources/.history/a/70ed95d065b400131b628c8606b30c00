@@ -10,9 +10,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class Thing{
 	protected Texture texture;
 	protected Sprite sprite;
-	public Size size;
-	public Size origin;
-	public Size position;
+	protected Size size;
+	protected Size origin;
+	protected Size position;
 	public Thing(int x, int y) {
 		origin = new Size(0, 0);
 		position = new Size(200, 200);	

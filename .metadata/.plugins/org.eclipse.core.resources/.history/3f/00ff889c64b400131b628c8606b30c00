@@ -71,7 +71,6 @@ public class Button extends Thing{
 		} else{
 			if(enabledLogic){
 			this.currentMouseInteraction = 3;
-			enabledLogic = false;
 			this.tick();
 			}
 			enabledLogic = false;

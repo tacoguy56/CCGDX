@@ -74,6 +74,12 @@ public class Game implements ApplicationListener {
 		//t.tick();
 		batch.end();
 		//post rendering stuffs
+		try {
+			System.out.println(ButtonHandler.getButtonByID("Cookie").enabled);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override

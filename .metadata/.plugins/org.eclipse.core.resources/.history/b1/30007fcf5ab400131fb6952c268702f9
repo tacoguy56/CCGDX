@@ -7,7 +7,6 @@ import java.util.List;
 import tacoguy56.ccgdx.button.Button;
 import tacoguy56.ccgdx.button.ButtonHandler;
 import tacoguy56.ccgdx.cookies.CookieManager;
-import tacoguy56.ccgdx.util.ClickHandler;
 import tacoguy56.ccgdx.util.FontHelper;
 import tacoguy56.ccgdx.util.Util;
 
@@ -53,14 +52,15 @@ public class Game implements ApplicationListener {
 	}
 	@Override
 	public void render() {
-		//pre-render stuffs
 		trueY = (Gdx.graphics.getHeight() - Gdx.input.getY()) * trueHeight / Gdx.graphics.getHeight();
 		trueX = (Gdx.input.getX()) * trueWidth / Gdx.graphics.getWidth();
 		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		ClickHandler.tick();
-		//begin rendering stuffs
 		batch.begin();
+		//t.render(batch);
+		
+		
+
 		List<Button> buttons = ButtonHandler.buttons;
 		for(int i = 0; i < buttons.size(); i++){
 			buttons.get(i).tick();
@@ -73,7 +73,24 @@ public class Game implements ApplicationListener {
 		}
 		//t.tick();
 		batch.end();
-		//post rendering stuffs
+		/*if(Gdx.input.isKeyPressed(Keys.LEFT)){
+			t.setPosition(t.position.x - 2, t.position.y);
+		}
+		if(Gdx.input.isKeyPressed(Keys.RIGHT)){
+			t.setPosition(t.position.x + 2, t.position.y);
+		}
+		if(Gdx.input.isKeyPressed(Keys.DOWN)){
+			t.setPosition(t.position.x, t.position.y - 2);
+		}
+		if(Gdx.input.isKeyPressed(Keys.UP)){
+			t.setPosition(t.position.x, t.position.y + 2);
+		}*/
+		try {
+			System.out.println(ButtonHandler.getButtonByID("Cookie").enabled);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override

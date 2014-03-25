@@ -14,7 +14,7 @@ public class CookieManager {
 		for(int i = 0; i < ButtonHandler.buttons.size(); i++){
 			if(ButtonHandler.buttons.get(i) instanceof ButtonCPS){
 				ButtonCPS bcps = (ButtonCPS) ButtonHandler.buttons.get(i);
-				FontHelper.printString(Integer.toString(bcps.amount), b, Color.BLACK, bcps.position.x, bcps.position.y);
+				FontHelper.printString(Integer.toString(bcps.amount), b, Color.BLACK, 380, 220);
 			}
 		}
 	}

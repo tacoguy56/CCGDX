@@ -42,19 +42,4 @@ public class ButtonHandler {
 			e.printStackTrace();
 		}
 	}
-	public static void clickButton(String ID){
-		try {
-			Button temp = getButtonByID(ID);
-			temp.clicked();
-			buttons.set(buttonByIDInt(ID), temp);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	public static void clickButton(int index){
-		Button temp = buttons.get(index);
-		temp.clicked();
-		buttons.set(index, temp);
-	}
 }
