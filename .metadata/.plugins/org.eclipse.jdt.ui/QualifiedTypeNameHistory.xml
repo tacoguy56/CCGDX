@@ -4,11 +4,9 @@
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.Thing"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Input.Buttons"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Game"/>
-<fullyQualifiedTypeName name="tacoguy56.ccgdx.util.Util"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.BitmapFont"/>
 <fullyQualifiedTypeName name="java.lang.CharSequence"/>
 <fullyQualifiedTypeName name="java.net.CookieManager"/>
-<fullyQualifiedTypeName name="tacoguy56.ccgdx.cookies.CookieManager"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.SpriteBatch"/>
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.util.FontHelper"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.List"/>
@@ -24,4 +22,6 @@
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.button.Button"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.button.ButtonCPS"/>
+<fullyQualifiedTypeName name="tacoguy56.ccgdx.util.Util"/>
+<fullyQualifiedTypeName name="tacoguy56.ccgdx.cookies.CookieManager"/>
 </qualifiedTypeNameHistroy>

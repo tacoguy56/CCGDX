@@ -1,16 +1,19 @@
 package tacoguy56.ccgdx.button;
 
 import tacoguy56.ccgdx.Game;
+import tacoguy56.ccgdx.cookies.CookieManager;
 
 import com.badlogic.gdx.graphics.Texture;
 
 public class ButtonCPS extends Button{
 	public int buttonPrice;
 	public int amount = 0;
+	public int CPSPerButton;
 	public ButtonCPS(int x, int y, Texture idle, Texture hover, Texture click,
-			String ID, int startPrice) {
+			String ID, int startPrice, int startCPS) {
 		super(x, y, idle, hover, click, ID);
 		this.buttonPrice = startPrice;
+		this.CPSPerButton = startCPS;
 	}
 	@Override
 	public void tick(){
@@ -27,6 +30,7 @@ public class ButtonCPS extends Button{
 		amount++;
 		Game.cookies -= buttonPrice;
 		buttonPrice *= 1.15;
+		CookieManager.updateCPS();
 		}
 	}
 }

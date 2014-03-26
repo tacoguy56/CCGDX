@@ -40,11 +40,10 @@ public class Game implements ApplicationListener {
 		camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
 		ButtonHandler.addButton(0, 0, 200, 200, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), "Cookie");
-		ButtonHandler.addButtonCPS(380, 220, 100, 100, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), "Cursor", 15);
-		ButtonHandler.setEnabled("Cookie", true);
-		ButtonHandler.setEnabled("Cursor", false);
+		ButtonHandler.addButtonCPS(380, 220, 100, 100, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), "Cursor", 15, 1);
 		trueHeight = Gdx.graphics.getHeight();
 		trueWidth = Gdx.graphics.getWidth();
+		Util.init();
 	}
 
 	@Override
@@ -53,6 +52,8 @@ public class Game implements ApplicationListener {
 	}
 	@Override
 	public void render() {
+		//pre-pre-render stuff
+		Util.updateRuntime();
 		//pre-render stuffs
 		trueY = (Gdx.graphics.getHeight() - Gdx.input.getY()) * trueHeight / Gdx.graphics.getHeight();
 		trueX = (Gdx.input.getX()) * trueWidth / Gdx.graphics.getWidth();
