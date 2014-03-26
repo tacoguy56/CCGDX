@@ -1,6 +1,10 @@
 package tacoguy56.ccgdx;
 
+import tacoguy56.ccgdx.button.ButtonCPS;
+import tacoguy56.ccgdx.util.FontHelper;
+
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -51,5 +55,10 @@ public class Thing{
 	}
 	public void render(SpriteBatch b) {	
 		sprite.draw(b);
+		if(this instanceof ButtonCPS){
+			if(((ButtonCPS)this).currentMouseInteraction > 0){
+			FontHelper.printString(Integer.toString(((ButtonCPS)this).buttonPrice), b, Color.GREEN, this.position.x, this.position.y + (this.size.y / 2));
+		}
+		}
 	}
 }

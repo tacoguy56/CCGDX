@@ -4,14 +4,15 @@ import tacoguy56.ccgdx.Game;
 import tacoguy56.ccgdx.cookies.CookieManager;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class ButtonCPS extends Button{
 	public int buttonPrice;
 	public int amount = 0;
 	public int CPSPerButton;
-	public ButtonCPS(int x, int y, Texture idle, Texture hover, Texture click,
+	public ButtonCPS(int x, int y, Texture idle, Texture hover, Texture click, Texture disabled,
 			String ID, int startPrice, int startCPS) {
-		super(x, y, idle, hover, click, ID);
+		super(x, y, idle, hover, click, disabled, ID);
 		this.buttonPrice = startPrice;
 		this.CPSPerButton = startCPS;
 	}

@@ -15,7 +15,6 @@ public class ClickHandler {
 		boolean mouse = Gdx.input.isButtonPressed(Buttons.LEFT);
 		if(mouse){
 			if(!clickBoolean){
-				System.out.println("Cleeck!");
 				findClick();
 			}
 			clickBoolean = true;

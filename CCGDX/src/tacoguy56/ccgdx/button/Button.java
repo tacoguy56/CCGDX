@@ -2,12 +2,15 @@ package tacoguy56.ccgdx.button;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Buttons;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import tacoguy56.ccgdx.Game;
 import tacoguy56.ccgdx.Size;
 import tacoguy56.ccgdx.Thing;
+import tacoguy56.ccgdx.util.FontHelper;
 
 public class Button extends Thing{
 	private boolean isMouseHovering;
@@ -17,16 +20,18 @@ public class Button extends Thing{
 	private Texture idle;
 	private Texture hover;
 	private Texture click;
+	private Texture disabled;
 	private boolean enabledLogic = false;
 	public boolean enabled = true;
 	private final String ID;
-	public Button(int x, int y, Texture idle, Texture hover, Texture click, String ID) {
+	public Button(int x, int y, Texture idle, Texture hover, Texture click, Texture disable, String ID) {
 		super(x, y);
 		this.idle = idle;
 		this.hover = hover;
 		this.click = click;
 		this.setTexture(idle);
 		this.ID = ID;
+		this.disabled = disable;
 	}
 	public String getID(){
 		return this.ID;
@@ -66,7 +71,7 @@ public class Button extends Thing{
 			currentMouseInteraction = 2;
 		}
 		if(!this.enabled){
-			this.setTexture(click);
+			this.setTexture(disabled);
 			enabledLogic = true;
 		} else{
 			if(enabledLogic){

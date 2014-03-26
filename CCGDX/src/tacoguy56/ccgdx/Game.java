@@ -6,6 +6,8 @@ import java.util.List;
 
 import tacoguy56.ccgdx.button.Button;
 import tacoguy56.ccgdx.button.ButtonHandler;
+import tacoguy56.ccgdx.button.UpgradeHandler;
+import tacoguy56.ccgdx.button.upgrades.CursorUpgrade1;
 import tacoguy56.ccgdx.cookies.CookieManager;
 import tacoguy56.ccgdx.util.ClickHandler;
 import tacoguy56.ccgdx.util.FontHelper;
@@ -29,8 +31,8 @@ public class Game implements ApplicationListener {
 	private static int trueWidth;
 	public static int trueY;
 	public static int trueX;
-	public static int cookies = 0;
-	//public static Button t;
+	//starting cookies
+	public static int cookies = 5000;
 	@Override
 	public void create() {
 		FontHelper.init();
@@ -39,10 +41,13 @@ public class Game implements ApplicationListener {
 		float h = Gdx.graphics.getHeight();
 		camera = new OrthographicCamera(1, h/w);
 		batch = new SpriteBatch();
-		ButtonHandler.addButton(0, 0, 200, 200, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), "Cookie");
-		ButtonHandler.addButtonCPS(380, 220, 100, 100, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), "Cursor", 15, 1);
+		ButtonHandler.addButton(0, 0, 200, 200, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), Util.strToTex("./bin/Click.png"), "Cookie");
+		//TODO update cursor textures
+		ButtonHandler.addButtonCPS(0, 270, 50, 50, Util.strToTex("./bin/Cursor/CursorIdle.png"), Util.strToTex("./bin/Cursor/CursorHover.png"), Util.strToTex("./bin/Cursor/CursorClick.png"), Util.strToTex("./bin/Cursor/CursorClick.png"),  "Cursor", 15, 1);
+		ButtonHandler.addButtonCPS(50, 270, 50, 50, Util.strToTex("./bin/Grandma/GrandmaIdle.png"), Util.strToTex("./bin/Grandma/GrandmaHover.png"), Util.strToTex("./bin/Grandma/GrandmaClick.png"), Util.strToTex("./bin/Grandma/GrandmaDisabled.png"),  "Grandma", 100, 5);
 		trueHeight = Gdx.graphics.getHeight();
 		trueWidth = Gdx.graphics.getWidth();
+		UpgradeHandler.addUpgrade(new CursorUpgrade1(440, 280, 100, 100, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), Util.strToTex("./bin/Click.png"), "CursorUpgrade1", 5000));
 		Util.init();
 	}
 
@@ -52,7 +57,7 @@ public class Game implements ApplicationListener {
 	}
 	@Override
 	public void render() {
-		//pre-pre-render stuff
+		UpgradeHandler.tick();
 		Util.updateRuntime();
 		//pre-render stuffs
 		trueY = (Gdx.graphics.getHeight() - Gdx.input.getY()) * trueHeight / Gdx.graphics.getHeight();
