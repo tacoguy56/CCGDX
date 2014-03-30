@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import tacoguy56.ccgdx.cookies.CookieManager;
+
 import com.badlogic.gdx.graphics.Texture;
 
 public class ButtonHandler {
@@ -63,7 +65,39 @@ public class ButtonHandler {
 			e.printStackTrace();
 		}
 	}
-
+	public static void setButtonCPS(int cps, String ID){
+		Button temp = null;
+		try {
+			temp = ButtonHandler.getButtonByID(ID);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		((ButtonCPS)temp).CPSPerButton = cps;
+		CookieManager.updateCPS();
+	}
+	public static int getButtonCPS(String ID){
+		int i = 0;
+		try {
+			i = ((ButtonCPS)(getButtonByID(ID))).CPSPerButton;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return i;
+	}
+	public static void setCPC(int cpc){
+		int id = 0;
+		try {
+			id = buttonByIDInt("Cookie");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Button b = buttons.get(id);
+		b.setCPC(cpc);
+		buttons.set(id, b);
+	}
 	public static void clickButton(String ID) {
 		try {
 			Button temp = getButtonByID(ID);

@@ -1,9 +1,0 @@
-package tacoguy56.ccgdx.cookies;
-
-import tacoguy56.ccgdx.Game;
-
-public class CookieManager {
-	public static void tick(){
-		Game.cookies++;
-	}
-}

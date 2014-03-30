@@ -19,7 +19,7 @@ public class Util {
 	private static long cycles = 0;
 	public static void updateRuntime(){
 		runTime = System.currentTimeMillis() - startTime;
-		if((int)Util.runTime / 100 > cycles){
+		if((int)Util.runTime / 100 >= cycles){
 			cycles++;
 			CookieManager.addCookies();
 		}

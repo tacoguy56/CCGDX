@@ -32,7 +32,7 @@ public class Game implements ApplicationListener {
 	public static int trueY;
 	public static int trueX;
 	//starting cookies
-	public static int cookies = 5000;
+	public static int cookies = 10000;
 	@Override
 	public void create() {
 		FontHelper.init();
@@ -47,7 +47,7 @@ public class Game implements ApplicationListener {
 		ButtonHandler.addButtonCPS(50, 270, 50, 50, Util.strToTex("./bin/Grandma/GrandmaIdle.png"), Util.strToTex("./bin/Grandma/GrandmaHover.png"), Util.strToTex("./bin/Grandma/GrandmaClick.png"), Util.strToTex("./bin/Grandma/GrandmaDisabled.png"),  "Grandma", 100, 5);
 		trueHeight = Gdx.graphics.getHeight();
 		trueWidth = Gdx.graphics.getWidth();
-		UpgradeHandler.addUpgrade(new CursorUpgrade1(440, 280, 100, 100, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), Util.strToTex("./bin/Click.png"), "CursorUpgrade1", 5000));
+		UpgradeHandler.addUpgrade(new CursorUpgrade1(440, 280, 100, 100, Util.strToTex("./bin/Idle.png"), Util.strToTex("./bin/Hover.png"), Util.strToTex("./bin/Click.png"), Util.strToTex("./bin/Click.png"), Util.strToTex("./bin/Hover.png"), "CursorUpgrade1", 5000));
 		Util.init();
 	}
 

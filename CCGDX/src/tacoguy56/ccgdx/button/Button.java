@@ -17,12 +17,13 @@ public class Button extends Thing{
 	private Texture texture;
 	private Sprite sprite;
 	public short currentMouseInteraction = 0;
-	private Texture idle;
-	private Texture hover;
-	private Texture click;
-	private Texture disabled;
+	protected Texture idle;
+	protected Texture hover;
+	protected Texture click;
+	protected Texture disabled;
 	private boolean enabledLogic = false;
 	public boolean enabled = true;
+	private static int cookiesPerClick;
 	private final String ID;
 	public Button(int x, int y, Texture idle, Texture hover, Texture click, Texture disable, String ID) {
 		super(x, y);
@@ -32,6 +33,7 @@ public class Button extends Thing{
 		this.setTexture(idle);
 		this.ID = ID;
 		this.disabled = disable;
+		cookiesPerClick = 1;
 	}
 	public String getID(){
 		return this.ID;
@@ -82,8 +84,18 @@ public class Button extends Thing{
 			enabledLogic = false;
 		}
 	}
+	public void setCPC(int c){
+		if(this.ID == "Cookie"){
+		this.cookiesPerClick = c;
+		}
+		}
+	public int getCPC(){
+		return this.cookiesPerClick;
+	}
 	public void clicked() {
-		Game.cookies++;
+		if(this.ID == "Cookie"){
+		Game.cookies += cookiesPerClick;
+	}
 	}
 	
 }

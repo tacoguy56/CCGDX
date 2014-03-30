@@ -12,11 +12,8 @@
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.button.Clickable"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.util.ClickHandler"/>
-<fullyQualifiedTypeName name="tacoguy56.ccgdx.button.Button"/>
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.util.Util"/>
-<fullyQualifiedTypeName name="tacoguy56.ccgdx.cookies.CookieManager"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Texture"/>
-<fullyQualifiedTypeName name="tacoguy56.ccgdx.button.ButtonUpgrade"/>
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.util.FontHelper"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Color"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.SpriteBatch"/>
@@ -24,9 +21,12 @@
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.Game"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="tacoguy56.ccgdx.button.ButtonHandler"/>
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.button.ButtonCPS"/>
 <fullyQualifiedTypeName name="tacoguy56.ccgdx.button.UpgradeHandler"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="tacoguy56.ccgdx.cookies.CookieManager"/>
+<fullyQualifiedTypeName name="tacoguy56.ccgdx.button.ButtonUpgrade"/>
+<fullyQualifiedTypeName name="tacoguy56.ccgdx.button.Button"/>
+<fullyQualifiedTypeName name="tacoguy56.ccgdx.button.ButtonHandler"/>
 </qualifiedTypeNameHistroy>

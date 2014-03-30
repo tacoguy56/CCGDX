@@ -1,6 +1,7 @@
 package tacoguy56.ccgdx;
 
 import tacoguy56.ccgdx.button.ButtonCPS;
+import tacoguy56.ccgdx.button.ButtonUpgrade;
 import tacoguy56.ccgdx.util.FontHelper;
 
 import com.badlogic.gdx.Gdx;
@@ -57,8 +58,31 @@ public class Thing{
 		sprite.draw(b);
 		if(this instanceof ButtonCPS){
 			if(((ButtonCPS)this).currentMouseInteraction > 0){
-			FontHelper.printString(Integer.toString(((ButtonCPS)this).buttonPrice), b, Color.GREEN, this.position.x, this.position.y + (this.size.y / 2));
+				Color c = Color.BLACK;
+				if(((ButtonCPS)this).enabled){
+					c = Color.GREEN;
+				}else{
+					c = Color.RED;
+				}
+			FontHelper.printString(Integer.toString(((ButtonCPS)this).buttonPrice), b, c, this.position.x, this.position.y + (this.size.y / 2));
 		}
+		}
+		if(this instanceof ButtonUpgrade){
+			if(((ButtonUpgrade)this).currentMouseInteraction > 0){
+				Color c = Color.BLACK;
+				if(((ButtonUpgrade)this).enabled){
+					c = Color.GREEN;
+				}else{
+					c = Color.RED;
+				}
+			FontHelper.printString(Integer.toString(((ButtonUpgrade)this).price), b, c, this.position.x, this.position.y + (this.size.y / 2));
+				Thing t = new Thing(80, 60);
+				t.setTexture(((ButtonUpgrade)this).description);
+				t.setPosition(Game.trueX - this.size.x, Game.trueY - this.size.y);
+				if(t.position.x < 0)t.setPosition(0, t.position.y);
+				if(t.position.y < 0)t.setPosition(t.position.x, 0);
+				t.render(b);
+			}
 		}
 	}
 }

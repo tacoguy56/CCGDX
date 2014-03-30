@@ -1,7 +1,0 @@
-package tacoguy56.ccgdx.cookies;
-
-public class CookieManager {
-	public static void tick(){
-		
-	}
-}

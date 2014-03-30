@@ -9,7 +9,7 @@ import tacoguy56.ccgdx.button.ButtonHandler;
 import tacoguy56.ccgdx.util.FontHelper;
 import tacoguy56.ccgdx.util.Util;
 public class CookieManager {
-	private static int CPS;
+	public static int CPS;
 	private static int centicookies = 0;
 	private static boolean manuCookieBool = false;
 	public static void tick(SpriteBatch b) throws Exception{
@@ -25,16 +25,15 @@ public class CookieManager {
 	public static void addCookies(){
 				Game.cookies += (CPS - CPS % 100 ) / 100;
 				centicookies += CPS % 100;
-				if(centicookies >= 100){
-					centicookies -= 100;
-					Game.cookies++;
-				}
+				Game.cookies += centicookies / 100;
+				centicookies %= 100;
 	}
 	public static void updateCPS(){
 		CPS = 0;
 		for(int i = 0; i < ButtonHandler.buttons.size(); i++){
 			if(ButtonHandler.buttons.get(i) instanceof ButtonCPS){
 				ButtonCPS bcps = (ButtonCPS) ButtonHandler.buttons.get(i);
+				System.out.println(bcps.CPSPerButton + " " + bcps.getID());
 				CPS += (bcps.CPSPerButton * bcps.amount);
 			}
 		}
