@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;tacoguy56.ccgdx.thing&apos; to &apos;Thing&apos;&#x0D;&#x0A;- Original project: &apos;CCGDX&apos;&#x0D;&#x0A;- Original element: &apos;tacoguy56.ccgdx.thing&apos;&#x0D;&#x0A;- Renamed element: &apos;tacoguy56.ccgdx.Thing&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;thing&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;tacoguy56.ccgdx{thing.java[thing" matchStrategy="1" name="Thing" qualified="false" references="true" similarDeclarations="false" stamp="1395276186680" textual="false" version="1.0"/>
-</session>
